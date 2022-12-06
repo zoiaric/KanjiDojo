@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73FE96CD293FD5AD009365FC /* KanjiDojoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96CC293FD5AD009365FC /* KanjiDojoApp.swift */; };
+		73FE96D1293FD5AE009365FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FE96D0293FD5AE009365FC /* Assets.xcassets */; };
+		73FE96D4293FD5AE009365FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FE96D3293FD5AE009365FC /* Preview Assets.xcassets */; };
+		73FE96DE293FD5AF009365FC /* KanjiDojoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96DD293FD5AF009365FC /* KanjiDojoTests.swift */; };
+		73FE96E8293FD5AF009365FC /* KanjiDojoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96E7293FD5AF009365FC /* KanjiDojoUITests.swift */; };
+		73FE96EA293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96E9293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift */; };
+		73FE96F7293FD66D009365FC /* kanji.json in Resources */ = {isa = PBXBuildFile; fileRef = 73FE96F6293FD66D009365FC /* kanji.json */; };
+		73FE96FA293FD6DC009365FC /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96F9293FD6DC009365FC /* JSONManager.swift */; };
+		73FE96FC293FD701009365FC /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96FB293FD701009365FC /* ViewDidLoadModifier.swift */; };
+		73FE96FE293FD72A009365FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96FD293FD72A009365FC /* Extensions.swift */; };
+		73FE9701293FD76C009365FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9700293FD76C009365FC /* ContentView.swift */; };
+		73FE9703293FD78F009365FC /* KanjiGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9702293FD78F009365FC /* KanjiGrid.swift */; };
+		73FE9705293FD79A009365FC /* ModeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9704293FD79A009365FC /* ModeSelection.swift */; };
+		73FE9707293FD7A6009365FC /* KanjiListSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9706293FD7A6009365FC /* KanjiListSelection.swift */; };
+		73FE9709293FD7B5009365FC /* LevelSelectionJLPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9708293FD7B5009365FC /* LevelSelectionJLPT.swift */; };
+		73FE970B293FD7BE009365FC /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE970A293FD7BE009365FC /* License.swift */; };
+		73FE970D293FD7CC009365FC /* KanjiDiplayedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE970C293FD7CC009365FC /* KanjiDiplayedView.swift */; };
+		73FE970F293FD7D7009365FC /* KanjiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE970E293FD7D7009365FC /* KanjiView.swift */; };
+		73FE9712293FD83F009365FC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9711293FD83F009365FC /* PrimaryButton.swift */; };
+		73FE9714293FD849009365FC /* DisplayedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9713293FD849009365FC /* DisplayedRow.swift */; };
+		73FE9716293FD89E009365FC /* KanjiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9715293FD89E009365FC /* KanjiManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73FE96DA293FD5AF009365FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FE96C1293FD5AD009365FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73FE96C8293FD5AD009365FC;
+			remoteInfo = KanjiDojo;
+		};
+		73FE96E4293FD5AF009365FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FE96C1293FD5AD009365FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73FE96C8293FD5AD009365FC;
+			remoteInfo = KanjiDojo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		73FE96C9293FD5AD009365FC /* KanjiDojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanjiDojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FE96CC293FD5AD009365FC /* KanjiDojoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoApp.swift; sourceTree = "<group>"; };
+		73FE96D0293FD5AE009365FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73FE96D3293FD5AE009365FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73FE96D9293FD5AF009365FC /* KanjiDojoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanjiDojoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FE96DD293FD5AF009365FC /* KanjiDojoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoTests.swift; sourceTree = "<group>"; };
+		73FE96E3293FD5AF009365FC /* KanjiDojoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanjiDojoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73FE96E7293FD5AF009365FC /* KanjiDojoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoUITests.swift; sourceTree = "<group>"; };
+		73FE96E9293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		73FE96F6293FD66D009365FC /* kanji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kanji.json; sourceTree = "<group>"; };
+		73FE96F9293FD6DC009365FC /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = SOURCE_ROOT; };
+		73FE96FB293FD701009365FC /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		73FE96FD293FD72A009365FC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		73FE9700293FD76C009365FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73FE9702293FD78F009365FC /* KanjiGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiGrid.swift; sourceTree = "<group>"; };
+		73FE9704293FD79A009365FC /* ModeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelection.swift; sourceTree = "<group>"; };
+		73FE9706293FD7A6009365FC /* KanjiListSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiListSelection.swift; sourceTree = "<group>"; };
+		73FE9708293FD7B5009365FC /* LevelSelectionJLPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionJLPT.swift; sourceTree = "<group>"; };
+		73FE970A293FD7BE009365FC /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		73FE970C293FD7CC009365FC /* KanjiDiplayedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDiplayedView.swift; sourceTree = "<group>"; };
+		73FE970E293FD7D7009365FC /* KanjiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiView.swift; sourceTree = "<group>"; };
+		73FE9711293FD83F009365FC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		73FE9713293FD849009365FC /* DisplayedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedRow.swift; sourceTree = "<group>"; };
+		73FE9715293FD89E009365FC /* KanjiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73FE96C6293FD5AD009365FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FE96D6293FD5AF009365FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FE96E0293FD5AF009365FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73FE96C0293FD5AD009365FC = {
+			isa = PBXGroup;
+			children = (
+				73FE96F8293FD6A2009365FC /* Models */,
+				73FE96CB293FD5AD009365FC /* KanjiDojo */,
+				73FE96DC293FD5AF009365FC /* KanjiDojoTests */,
+				73FE96E6293FD5AF009365FC /* KanjiDojoUITests */,
+				73FE96CA293FD5AD009365FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73FE96CA293FD5AD009365FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73FE96C9293FD5AD009365FC /* KanjiDojo.app */,
+				73FE96D9293FD5AF009365FC /* KanjiDojoTests.xctest */,
+				73FE96E3293FD5AF009365FC /* KanjiDojoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73FE96CB293FD5AD009365FC /* KanjiDojo */ = {
+			isa = PBXGroup;
+			children = (
+				73FE96CC293FD5AD009365FC /* KanjiDojoApp.swift */,
+				73FE96FB293FD701009365FC /* ViewDidLoadModifier.swift */,
+				73FE96FD293FD72A009365FC /* Extensions.swift */,
+				73FE9715293FD89E009365FC /* KanjiManager.swift */,
+				73FE96FF293FD755009365FC /* Views */,
+				73FE96D0293FD5AE009365FC /* Assets.xcassets */,
+				73FE96D2293FD5AE009365FC /* Preview Content */,
+			);
+			path = KanjiDojo;
+			sourceTree = "<group>";
+		};
+		73FE96D2293FD5AE009365FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				73FE96D3293FD5AE009365FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		73FE96DC293FD5AF009365FC /* KanjiDojoTests */ = {
+			isa = PBXGroup;
+			children = (
+				73FE96DD293FD5AF009365FC /* KanjiDojoTests.swift */,
+			);
+			path = KanjiDojoTests;
+			sourceTree = "<group>";
+		};
+		73FE96E6293FD5AF009365FC /* KanjiDojoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				73FE96E7293FD5AF009365FC /* KanjiDojoUITests.swift */,
+				73FE96E9293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift */,
+			);
+			path = KanjiDojoUITests;
+			sourceTree = "<group>";
+		};
+		73FE96F8293FD6A2009365FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73FE96F9293FD6DC009365FC /* JSONManager.swift */,
+				73FE96F6293FD66D009365FC /* kanji.json */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		73FE96FF293FD755009365FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73FE9700293FD76C009365FC /* ContentView.swift */,
+				73FE9702293FD78F009365FC /* KanjiGrid.swift */,
+				73FE9704293FD79A009365FC /* ModeSelection.swift */,
+				73FE9706293FD7A6009365FC /* KanjiListSelection.swift */,
+				73FE9708293FD7B5009365FC /* LevelSelectionJLPT.swift */,
+				73FE970A293FD7BE009365FC /* License.swift */,
+				73FE970C293FD7CC009365FC /* KanjiDiplayedView.swift */,
+				73FE970E293FD7D7009365FC /* KanjiView.swift */,
+				73FE9710293FD825009365FC /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73FE9710293FD825009365FC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				73FE9711293FD83F009365FC /* PrimaryButton.swift */,
+				73FE9713293FD849009365FC /* DisplayedRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73FE96C8293FD5AD009365FC /* KanjiDojo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73FE96ED293FD5AF009365FC /* Build configuration list for PBXNativeTarget "KanjiDojo" */;
+			buildPhases = (
+				73FE96C5293FD5AD009365FC /* Sources */,
+				73FE96C6293FD5AD009365FC /* Frameworks */,
+				73FE96C7293FD5AD009365FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KanjiDojo;
+			productName = KanjiDojo;
+			productReference = 73FE96C9293FD5AD009365FC /* KanjiDojo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73FE96D8293FD5AF009365FC /* KanjiDojoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73FE96F0293FD5AF009365FC /* Build configuration list for PBXNativeTarget "KanjiDojoTests" */;
+			buildPhases = (
+				73FE96D5293FD5AF009365FC /* Sources */,
+				73FE96D6293FD5AF009365FC /* Frameworks */,
+				73FE96D7293FD5AF009365FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73FE96DB293FD5AF009365FC /* PBXTargetDependency */,
+			);
+			name = KanjiDojoTests;
+			productName = KanjiDojoTests;
+			productReference = 73FE96D9293FD5AF009365FC /* KanjiDojoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		73FE96E2293FD5AF009365FC /* KanjiDojoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73FE96F3293FD5AF009365FC /* Build configuration list for PBXNativeTarget "KanjiDojoUITests" */;
+			buildPhases = (
+				73FE96DF293FD5AF009365FC /* Sources */,
+				73FE96E0293FD5AF009365FC /* Frameworks */,
+				73FE96E1293FD5AF009365FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73FE96E5293FD5AF009365FC /* PBXTargetDependency */,
+			);
+			name = KanjiDojoUITests;
+			productName = KanjiDojoUITests;
+			productReference = 73FE96E3293FD5AF009365FC /* KanjiDojoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73FE96C1293FD5AD009365FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					73FE96C8293FD5AD009365FC = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					73FE96D8293FD5AF009365FC = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 73FE96C8293FD5AD009365FC;
+					};
+					73FE96E2293FD5AF009365FC = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 73FE96C8293FD5AD009365FC;
+					};
+				};
+			};
+			buildConfigurationList = 73FE96C4293FD5AD009365FC /* Build configuration list for PBXProject "KanjiDojo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73FE96C0293FD5AD009365FC;
+			productRefGroup = 73FE96CA293FD5AD009365FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73FE96C8293FD5AD009365FC /* KanjiDojo */,
+				73FE96D8293FD5AF009365FC /* KanjiDojoTests */,
+				73FE96E2293FD5AF009365FC /* KanjiDojoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73FE96C7293FD5AD009365FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FE96F7293FD66D009365FC /* kanji.json in Resources */,
+				73FE96D4293FD5AE009365FC /* Preview Assets.xcassets in Resources */,
+				73FE96D1293FD5AE009365FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FE96D7293FD5AF009365FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FE96E1293FD5AF009365FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73FE96C5293FD5AD009365FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FE9714293FD849009365FC /* DisplayedRow.swift in Sources */,
+				73FE9716293FD89E009365FC /* KanjiManager.swift in Sources */,
+				73FE9709293FD7B5009365FC /* LevelSelectionJLPT.swift in Sources */,
+				73FE9705293FD79A009365FC /* ModeSelection.swift in Sources */,
+				73FE96FA293FD6DC009365FC /* JSONManager.swift in Sources */,
+				73FE9712293FD83F009365FC /* PrimaryButton.swift in Sources */,
+				73FE9701293FD76C009365FC /* ContentView.swift in Sources */,
+				73FE96FC293FD701009365FC /* ViewDidLoadModifier.swift in Sources */,
+				73FE9707293FD7A6009365FC /* KanjiListSelection.swift in Sources */,
+				73FE9703293FD78F009365FC /* KanjiGrid.swift in Sources */,
+				73FE96CD293FD5AD009365FC /* KanjiDojoApp.swift in Sources */,
+				73FE970B293FD7BE009365FC /* License.swift in Sources */,
+				73FE970F293FD7D7009365FC /* KanjiView.swift in Sources */,
+				73FE970D293FD7CC009365FC /* KanjiDiplayedView.swift in Sources */,
+				73FE96FE293FD72A009365FC /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FE96D5293FD5AF009365FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FE96DE293FD5AF009365FC /* KanjiDojoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FE96DF293FD5AF009365FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73FE96EA293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift in Sources */,
+				73FE96E8293FD5AF009365FC /* KanjiDojoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73FE96DB293FD5AF009365FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73FE96C8293FD5AD009365FC /* KanjiDojo */;
+			targetProxy = 73FE96DA293FD5AF009365FC /* PBXContainerItemProxy */;
+		};
+		73FE96E5293FD5AF009365FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73FE96C8293FD5AD009365FC /* KanjiDojo */;
+			targetProxy = 73FE96E4293FD5AF009365FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		73FE96EB293FD5AF009365FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73FE96EC293FD5AF009365FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73FE96EE293FD5AF009365FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KanjiDojo/Preview Content\"";
+				DEVELOPMENT_TEAM = 8DB429W6ZT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73FE96EF293FD5AF009365FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KanjiDojo/Preview Content\"";
+				DEVELOPMENT_TEAM = 8DB429W6ZT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		73FE96F1293FD5AF009365FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DB429W6ZT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KanjiDojo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KanjiDojo";
+			};
+			name = Debug;
+		};
+		73FE96F2293FD5AF009365FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DB429W6ZT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KanjiDojo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KanjiDojo";
+			};
+			name = Release;
+		};
+		73FE96F4293FD5AF009365FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DB429W6ZT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KanjiDojo;
+			};
+			name = Debug;
+		};
+		73FE96F5293FD5AF009365FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8DB429W6ZT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KanjiDojo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73FE96C4293FD5AD009365FC /* Build configuration list for PBXProject "KanjiDojo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FE96EB293FD5AF009365FC /* Debug */,
+				73FE96EC293FD5AF009365FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73FE96ED293FD5AF009365FC /* Build configuration list for PBXNativeTarget "KanjiDojo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FE96EE293FD5AF009365FC /* Debug */,
+				73FE96EF293FD5AF009365FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73FE96F0293FD5AF009365FC /* Build configuration list for PBXNativeTarget "KanjiDojoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FE96F1293FD5AF009365FC /* Debug */,
+				73FE96F2293FD5AF009365FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73FE96F3293FD5AF009365FC /* Build configuration list for PBXNativeTarget "KanjiDojoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73FE96F4293FD5AF009365FC /* Debug */,
+				73FE96F5293FD5AF009365FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73FE96C1293FD5AD009365FC /* Project object */;
+}
