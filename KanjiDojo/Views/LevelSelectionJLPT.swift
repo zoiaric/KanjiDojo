@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LevelSelectionJLPT: View {
+    @Binding var allKanji: [Kanji]
     //let backgroundColor : Color = Color(red: 0.984313725490196, green: 0.9294117647058824, blue:
     @Binding var survivorModeTapped: Bool
     @Binding var JLPT1: Bool
@@ -15,6 +16,8 @@ struct LevelSelectionJLPT: View {
     @Binding var JLPT3: Bool
     @Binding var JLPT4: Bool
     @Binding var JLPT5: Bool
+    @Binding var firstKanji: String
+    @Binding var lastKanji: String
     var body: some View {
         VStack(spacing: 30){
             Text("JLPT 5")
@@ -32,7 +35,8 @@ struct LevelSelectionJLPT: View {
                 .onTapGesture{
                     if(!(JLPTLevels(jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5).count==1 && JLPT5 == true)){
                         if(survivorModeTapped){
-                            JLPT5 = !JLPT5; JLPT1 = false; JLPT2 = false; JLPT3 = false; JLPT4 = false}
+                            JLPT5 = !JLPT5; JLPT1 = false; JLPT2 = false; JLPT3 = false; JLPT4 = false;
+                            lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)); kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)}
                         else{
                             JLPT5 = !JLPT5
                         }
@@ -54,7 +58,9 @@ struct LevelSelectionJLPT: View {
                     .onTapGesture{
                         if(!(JLPTLevels(jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5).count==1 && JLPT4 == true)){
                             if(survivorModeTapped){
-                            JLPT4 = !JLPT4; JLPT1 = false; JLPT2 = false; JLPT3 = false; JLPT5 = false}
+                                JLPT4 = !JLPT4; JLPT1 = false; JLPT2 = false; JLPT3 = false; JLPT5 = false;
+                                lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5));
+                                kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)}
                             else{
                             JLPT4 = !JLPT4
                             }
@@ -75,7 +81,9 @@ struct LevelSelectionJLPT: View {
                     .onTapGesture{
                         if(!(JLPTLevels(jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5).count==1 && JLPT3 == true)){
                             if(survivorModeTapped){
-                                JLPT3 = !JLPT3; JLPT1 = false; JLPT2 = false; JLPT4 = false; JLPT5 = false}
+                                JLPT3 = !JLPT3; JLPT1 = false; JLPT2 = false; JLPT4 = false; JLPT5 = false;
+                                lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5));
+                                kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)}
                             else{
                                 JLPT3 = !JLPT3
                             }
@@ -98,7 +106,9 @@ struct LevelSelectionJLPT: View {
                     .onTapGesture{
                         if(!(JLPTLevels(jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5).count==1 && JLPT2 == true)){
                             if(survivorModeTapped){
-                                JLPT2 = !JLPT2; JLPT1 = false; JLPT3 = false; JLPT4 = false; JLPT5 = false}
+                                JLPT2 = !JLPT2; JLPT1 = false; JLPT3 = false; JLPT4 = false; JLPT5 = false;
+                                lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5));
+                                kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)}
                             else{
                                 JLPT2 = !JLPT2
                             }
@@ -119,7 +129,9 @@ struct LevelSelectionJLPT: View {
                     .onTapGesture{
                         if(!(JLPTLevels(jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5).count==1 && JLPT1 == true)){
                             if(survivorModeTapped){
-                                JLPT1 = !JLPT1; JLPT2 = false; JLPT3 = false; JLPT4 = false; JLPT5 = false}
+                                JLPT1 = !JLPT1; JLPT2 = false; JLPT3 = false; JLPT4 = false; JLPT5 = false;
+                                lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5));
+                                kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)}
                             else{
                                 JLPT1 = !JLPT1
                             }
@@ -138,6 +150,11 @@ struct LevelSelectionJLPT: View {
 
 struct LevelSelectionJLPT_Previews: PreviewProvider {
     static var previews: some View {
-        LevelSelectionJLPT(survivorModeTapped: .constant(true),JLPT1:.constant(false),JLPT2:.constant(false),JLPT3:.constant(false),JLPT4:.constant(false),JLPT5:.constant(false))
+        LevelSelectionJLPT(allKanji:.constant(kanjis),survivorModeTapped: .constant(true),JLPT1:.constant(false),JLPT2:.constant(false),JLPT3:.constant(false),JLPT4:.constant(false),JLPT5:.constant(false),firstKanji: .constant("1"), lastKanji: .constant(String(kanjis.count)))
     }
+    
+    /*
+     LevelSelectionJLPT(survivorModeTapped: .constant(true),JLPT1:.constant(false),JLPT2:.constant(false),JLPT3:.constant(false),JLPT4:.constant(false),JLPT5:.constant(false),firstKanji: .constant("1"), lastKanji: .constant(String(allKanji.count)))
+ }
+     */
 }

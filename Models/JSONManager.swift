@@ -35,8 +35,32 @@ extension Bundle{
         return loadedData
     }
 }
+//CAMBIATO NOME IN KANJIS PER METTERGLI LO @STATE
+var kanjis: [Kanji] = Bundle.main.decode(file: "kanji.json")
 
-var allKanji: [Kanji] = Bundle.main.decode(file: "kanji.json")
+func bar(number : Int, survMode : Bool, stdMode : Bool) -> Int{
+    if survMode{
+        return ((85/3)*(4 - number))
+    }
+    else if stdMode{
+        return ((85/17)*(20 - number))
+    }
+    return 0
+}
+
+func resetWeights(kanji : inout [Kanji]){
+    let indexes : [Int] = [0,1,2,3,4]
+    for n in 0..<kanji.count{
+        if indexes.contains(kanji[n].index_jlpt){
+            kanji[n].weight = 20
+        }
+        else{
+            kanji[n].weight = 0
+        }
+        //kanji[n].index_jlpt == 0 ? (kanji[n].weight = 20) : (kanji[n].weight = 0)
+    }
+    UserDefaults.standard.set(kanji.map{ $0.weight }, forKey: "weights")
+}
 
 func kanjiSelection(kanji : inout [Kanji], first : Int, last : Int, jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Bool, jlpt4 : Bool, jlpt5 : Bool){
 
@@ -71,7 +95,7 @@ func kanjiSelection(kanji : inout [Kanji], first : Int, last : Int, jlpt1 : Bool
         kanji[h].weight = 0
     }
     for k in firstKanji-1...lastKanji-1{
-        kanji[k].weight = 3
+        kanji[k].weight = 4
     }
     if(lastKanji == kanji.count){
         return
@@ -103,7 +127,7 @@ func setStandardMode(kanji : inout [Kanji]){
     //for index in 0..<kanji.count{kanji[index].weight = UserDefaults.standard.weights[index]}
 }
 
-func allLearned(kanji : inout [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Bool, jlpt4 : Bool, jlpt5 : Bool) -> Int {
+func allLearned(kanji : [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Bool, jlpt4 : Bool, jlpt5 : Bool) -> Int {
     var JLPT : [Int] = []
     if jlpt1 {JLPT.append(1)}
     if jlpt2 {JLPT.append(2)}
@@ -141,7 +165,7 @@ func validateFirstLast(kanji : inout [Kanji], first : String, last : String, jlp
         return true
     }
     //controllo che il last e first non siano out of range e che il first sia minore del last
-    if (lastInt>lastKanjiCalculated || firstInt < 1 || firstInt >= lastInt || firstInt < 0 || lastInt < 0){
+    if (lastInt>lastKanjiCalculated || firstInt < 1 || firstInt > lastInt || firstInt < 0 || lastInt < 0){
         return true
     }
     //se è tutto ok ritorno true
@@ -160,7 +184,7 @@ func getLastKanji(kanji : inout [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Boo
     return kanjiFiltered.count
 }
 
-func generateIndex(kanji : inout [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Bool, jlpt4 : Bool, jlpt5 : Bool) -> Int {
+func generateIndex(kanji : inout [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Bool, jlpt4 : Bool, jlpt5 : Bool, survMode : Bool, stdMode : Bool) -> Int {
     var JLPT : [Int] = []
     if jlpt1 {JLPT.append(1)}
     if jlpt2 {JLPT.append(2)}
@@ -168,37 +192,74 @@ func generateIndex(kanji : inout [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlpt3 : Bo
     if jlpt4 {JLPT.append(4)}
     if jlpt5 {JLPT.append(5)}
     
-    let kanjiFiltered = kanji.filter { JLPT.contains($0.jlpt_new) }
-    
-    let arrayWeights = kanjiFiltered.map { $0.weight }
-    let arrayIndex = kanjiFiltered.map { $0.index }
-    
-    
-    let weightsSum = arrayWeights.reduce(0, +)
+    if(stdMode){
+        let kanjiFiltered = kanji.filter { JLPT.contains($0.jlpt_new) }
+        
+        let arrayWeights = kanjiFiltered.map { $0.weight }
+        let arrayIndex = kanjiFiltered.map { $0.index }
+        
+        
+        let weightsSum = arrayWeights.reduce(0, +)
 
-    if(weightsSum == 0){
-        //significa che ho fatto tutto, mi deve dire che ho finito di imparare tutto
-        //rettifica: qua se lasciamo il peso minimo a 1 non si entrerà mai -> addWeight deve funzionare solo se peso > 1
+        if(weightsSum == 0){
+            //significa che ho fatto tutto, mi deve dire che ho finito di imparare tutto
+            //rettifica: qua se lasciamo il peso minimo a 1 non si entrerà mai -> addWeight deve funzionare solo se peso > 1
+            return 0
+        }
+        /*
+         in modo tale che controllo se ho imparato tutti i kanji di un certo livello di jlpt(?)
+        if(weightsSum == kanjiFiltered.count * pesoBase){
+            
+        }
+         */
+        let randomValue = Int.random(in: 0..<weightsSum)
+        print("random value: \(randomValue)")
+        var tempSum = 0
+        for index in 0...(arrayWeights.count-1){
+            tempSum += arrayWeights[index]
+            //print("temp sum: \(tempSum)")
+            if(tempSum > randomValue){
+                print("indice selezionato: \(index)")
+                return arrayIndex[index]
+            }
+        }
         return 0
     }
-    /*
-     in modo tale che controllo se ho imparato tutti i kanji di un certo livello di jlpt(?)
-    if(weightsSum == kanjiFiltered.count * pesoBase){
+    else if(survMode){
+        //let kanjiFiltered = kanji.filter { JLPT.contains($0.jlpt_new)}
+        let kanjiFiltered = kanji.filter { $0.weight != 0 && $0.weight != 1}
+        print("kanjiFiltered: \(kanjiFiltered)")
+        let arrayWeights = kanjiFiltered.map { $0.weight }
+        print("arrayWeights count: \(arrayWeights.count-1)")
+        //let arrayIndex = kanjiFiltered.map { $0.index }
+        let weightsSum = arrayWeights.reduce(0, +)
+        print("weightSum: \(weightsSum)")
         
-    }
-     */
-    let randomValue = Int.random(in: 0..<weightsSum)
-    print("random value: \(randomValue)")
-    var tempSum = 0
-    for index in 0..<(arrayWeights.count-1){
-        tempSum += arrayWeights[index]
-        //print("temp sum: \(tempSum)")
-        if(tempSum > randomValue){
-            print("indice selezionato: \(index)")
-            return arrayIndex[index]
+        if(weightsSum != 0){
+            let randomValue = Int.random(in: 0..<weightsSum)
+            print("random value: \(randomValue)")
+            var tempSum = 0
+            for index in 0...(arrayWeights.count-1){
+                //tempSum += arrayWeights[index]
+                tempSum += kanjiFiltered[index].weight
+                print("tempSum: \(tempSum)")
+                //if arrayWeights[index] == 1{
+                //    print("skip")
+                //}
+                //print("temp sum: \(tempSum)")
+                
+                //else if(tempSum > randomValue){
+                if(tempSum > randomValue){
+                    //print("indice selezionato: \(index)")
+                    //return arrayIndex[index]
+                    print("indice selezionato: \(kanjiFiltered[index].index)")
+                    return kanjiFiltered[index].index
+                }
+            }
         }
     }
     return 0
+    
 }
 
 func appendKanji(kanjiToAppend : Kanji, theArray : inout[Kanji]){
@@ -226,7 +287,7 @@ func getUnlockedKanjiIndex(kanji: inout [Kanji], jlpt1 : Bool, jlpt2 : Bool, jlp
         kanji[first0weight.index].weight = 20
         return first0weight.index
     } else {
-        return 0
+        return generateIndex(kanji : &kanji, jlpt1 : jlpt1, jlpt2 : jlpt2, jlpt3 : jlpt3, jlpt4 : jlpt4, jlpt5 : jlpt5, survMode : false, stdMode : true)
     }
 }
 
@@ -246,7 +307,10 @@ func addWeight(kanji: inout [Kanji], index : Int, weightModifier : Int, stdMode 
     }
     else if (survMode){
         //sopra al 3 non posso mai andare
-        if(weightModifier == +1 && kanji[index].weight >= 3){
+        if(weightModifier == +1 && kanji[index].weight >= 4){
+            return
+        }
+        else if (weightModifier == -1 && kanji[index].weight <= 1){
             return
         }
         else{
@@ -265,11 +329,11 @@ func addWeight(kanji: inout [Kanji], index : Int, weightModifier : Int, stdMode 
 //UserDefaults.standard.weights
 //[20, 20, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-/*
-func saveWeights() {
-    UserDefaults.standard.set(allKanji.map { $0.weight }, forKey: "weights")
-}
 
+func saveWeights() {
+    UserDefaults.standard.set(kanjis.map { $0.weight }, forKey: "weights")
+}
+/*
 func setWeights(kanji : inout [Kanji]){
     for index in 0..<kanji.count{
         kanji[index].weight = UserDefaults.standard.weights[index]

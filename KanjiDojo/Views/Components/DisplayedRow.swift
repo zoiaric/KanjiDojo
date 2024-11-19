@@ -14,16 +14,30 @@ struct DisplayedRow: View {
     @Binding var isTapped: Bool
     var body: some View {
         VStack(spacing: 20) {
-            Text(row.kanji)
-                .bold()
-                .font(.system(size: 40))
-                .onTapGesture{isTapped = !isTapped}
+            ZStack{
+                Text(row.kanji)
+                    .bold()
+                    .font(.system(size: 40))
+                HStack{
+                    if isTapped {
+                        Image(systemName: "eye.slash")
+                            .offset(x: 50, y: 0)
+                            .onTapGesture{isTapped = !isTapped}
+                                    //.background(.red)
+                    }
+                    else {
+                        Image(systemName: "eye")
+                            .offset(x: 50, y: 0)
+                            .onTapGesture{isTapped = !isTapped}
+                    }
+                }
+            }
             VStack(spacing: 20){
                 titleRow(text: "FURIGANA KUNYOMI")
                 Text(row.kun_readings).bold().frame(minHeight:50)
                 titleRow(text: "FURIGANA ONYOMI")
                 Text(row.on_readings).bold().frame(minHeight:50)
-                titleRow(text: "TRADUZIONE")
+                titleRow(text: "TRADUCTION")
                 Text(row.meanings).bold()
                     //.frame(height: 20)
                     //.border(.green)

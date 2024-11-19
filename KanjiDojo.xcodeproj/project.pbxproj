@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		732C0A9729786E7200E8CF96 /* kanji.json in Resources */ = {isa = PBXBuildFile; fileRef = 732C0A9629786E7200E8CF96 /* kanji.json */; };
+		73820EE8294B58DE003CEB1E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73820EE7294B58DE003CEB1E /* Launch Screen.storyboard */; };
 		73DA2867293FDC0800AC084E /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA2866293FDC0800AC084E /* JSONManager.swift */; };
+		73DA2869293FE4BE00AC084E /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA2868293FE4BE00AC084E /* Instructions.swift */; };
+		73DA286B293FE51200AC084E /* SupportMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA286A293FE51200AC084E /* SupportMe.swift */; };
 		73FE96CD293FD5AD009365FC /* KanjiDojoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96CC293FD5AD009365FC /* KanjiDojoApp.swift */; };
 		73FE96D1293FD5AE009365FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FE96D0293FD5AE009365FC /* Assets.xcassets */; };
 		73FE96D4293FD5AE009365FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FE96D3293FD5AE009365FC /* Preview Assets.xcassets */; };
 		73FE96DE293FD5AF009365FC /* KanjiDojoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96DD293FD5AF009365FC /* KanjiDojoTests.swift */; };
 		73FE96E8293FD5AF009365FC /* KanjiDojoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96E7293FD5AF009365FC /* KanjiDojoUITests.swift */; };
 		73FE96EA293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96E9293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift */; };
-		73FE96F7293FD66D009365FC /* kanji.json in Resources */ = {isa = PBXBuildFile; fileRef = 73FE96F6293FD66D009365FC /* kanji.json */; };
 		73FE96FC293FD701009365FC /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96FB293FD701009365FC /* ViewDidLoadModifier.swift */; };
 		73FE96FE293FD72A009365FC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE96FD293FD72A009365FC /* Extensions.swift */; };
 		73FE9701293FD76C009365FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9700293FD76C009365FC /* ContentView.swift */; };
 		73FE9703293FD78F009365FC /* KanjiGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9702293FD78F009365FC /* KanjiGrid.swift */; };
 		73FE9705293FD79A009365FC /* ModeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9704293FD79A009365FC /* ModeSelection.swift */; };
-		73FE9707293FD7A6009365FC /* KanjiListSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9706293FD7A6009365FC /* KanjiListSelection.swift */; };
 		73FE9709293FD7B5009365FC /* LevelSelectionJLPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9708293FD7B5009365FC /* LevelSelectionJLPT.swift */; };
 		73FE970B293FD7BE009365FC /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE970A293FD7BE009365FC /* License.swift */; };
 		73FE970D293FD7CC009365FC /* KanjiDiplayedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE970C293FD7CC009365FC /* KanjiDiplayedView.swift */; };
-		73FE970F293FD7D7009365FC /* KanjiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE970E293FD7D7009365FC /* KanjiView.swift */; };
 		73FE9712293FD83F009365FC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9711293FD83F009365FC /* PrimaryButton.swift */; };
 		73FE9714293FD849009365FC /* DisplayedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9713293FD849009365FC /* DisplayedRow.swift */; };
 		73FE9716293FD89E009365FC /* KanjiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE9715293FD89E009365FC /* KanjiManager.swift */; };
@@ -48,7 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		732C0A9629786E7200E8CF96 /* kanji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kanji.json; sourceTree = "<group>"; };
+		73820EE7294B58DE003CEB1E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		73C5B174294A809A00C7BD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73DA2866293FDC0800AC084E /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		73DA2868293FE4BE00AC084E /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
+		73DA286A293FE51200AC084E /* SupportMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMe.swift; sourceTree = "<group>"; };
 		73FE96C9293FD5AD009365FC /* KanjiDojo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KanjiDojo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FE96CC293FD5AD009365FC /* KanjiDojoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoApp.swift; sourceTree = "<group>"; };
 		73FE96D0293FD5AE009365FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,17 +64,14 @@
 		73FE96E3293FD5AF009365FC /* KanjiDojoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KanjiDojoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FE96E7293FD5AF009365FC /* KanjiDojoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoUITests.swift; sourceTree = "<group>"; };
 		73FE96E9293FD5AF009365FC /* KanjiDojoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDojoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		73FE96F6293FD66D009365FC /* kanji.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kanji.json; sourceTree = "<group>"; };
 		73FE96FB293FD701009365FC /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 		73FE96FD293FD72A009365FC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		73FE9700293FD76C009365FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		73FE9702293FD78F009365FC /* KanjiGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiGrid.swift; sourceTree = "<group>"; };
 		73FE9704293FD79A009365FC /* ModeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelection.swift; sourceTree = "<group>"; };
-		73FE9706293FD7A6009365FC /* KanjiListSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiListSelection.swift; sourceTree = "<group>"; };
 		73FE9708293FD7B5009365FC /* LevelSelectionJLPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionJLPT.swift; sourceTree = "<group>"; };
 		73FE970A293FD7BE009365FC /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		73FE970C293FD7CC009365FC /* KanjiDiplayedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiDiplayedView.swift; sourceTree = "<group>"; };
-		73FE970E293FD7D7009365FC /* KanjiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiView.swift; sourceTree = "<group>"; };
 		73FE9711293FD83F009365FC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		73FE9713293FD849009365FC /* DisplayedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayedRow.swift; sourceTree = "<group>"; };
 		73FE9715293FD89E009365FC /* KanjiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanjiManager.swift; sourceTree = "<group>"; };
@@ -102,6 +105,7 @@
 		73FE96C0293FD5AD009365FC = {
 			isa = PBXGroup;
 			children = (
+				73820EE7294B58DE003CEB1E /* Launch Screen.storyboard */,
 				73FE96F8293FD6A2009365FC /* Models */,
 				73FE96CB293FD5AD009365FC /* KanjiDojo */,
 				73FE96DC293FD5AF009365FC /* KanjiDojoTests */,
@@ -123,6 +127,7 @@
 		73FE96CB293FD5AD009365FC /* KanjiDojo */ = {
 			isa = PBXGroup;
 			children = (
+				73C5B174294A809A00C7BD4C /* Info.plist */,
 				73FE96CC293FD5AD009365FC /* KanjiDojoApp.swift */,
 				73FE96FB293FD701009365FC /* ViewDidLoadModifier.swift */,
 				73FE96FD293FD72A009365FC /* Extensions.swift */,
@@ -162,7 +167,7 @@
 		73FE96F8293FD6A2009365FC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				73FE96F6293FD66D009365FC /* kanji.json */,
+				732C0A9629786E7200E8CF96 /* kanji.json */,
 				73DA2866293FDC0800AC084E /* JSONManager.swift */,
 			);
 			path = Models;
@@ -174,11 +179,11 @@
 				73FE9700293FD76C009365FC /* ContentView.swift */,
 				73FE9702293FD78F009365FC /* KanjiGrid.swift */,
 				73FE9704293FD79A009365FC /* ModeSelection.swift */,
-				73FE9706293FD7A6009365FC /* KanjiListSelection.swift */,
 				73FE9708293FD7B5009365FC /* LevelSelectionJLPT.swift */,
-				73FE970A293FD7BE009365FC /* License.swift */,
 				73FE970C293FD7CC009365FC /* KanjiDiplayedView.swift */,
-				73FE970E293FD7D7009365FC /* KanjiView.swift */,
+				73FE970A293FD7BE009365FC /* License.swift */,
+				73DA2868293FE4BE00AC084E /* Instructions.swift */,
+				73DA286A293FE51200AC084E /* SupportMe.swift */,
 				73FE9710293FD825009365FC /* Components */,
 			);
 			path = Views;
@@ -297,8 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73FE96F7293FD66D009365FC /* kanji.json in Resources */,
+				732C0A9729786E7200E8CF96 /* kanji.json in Resources */,
 				73FE96D4293FD5AE009365FC /* Preview Assets.xcassets in Resources */,
+				73820EE8294B58DE003CEB1E /* Launch Screen.storyboard in Resources */,
 				73FE96D1293FD5AE009365FC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DA2869293FE4BE00AC084E /* Instructions.swift in Sources */,
 				73FE9714293FD849009365FC /* DisplayedRow.swift in Sources */,
 				73FE9716293FD89E009365FC /* KanjiManager.swift in Sources */,
 				73FE9709293FD7B5009365FC /* LevelSelectionJLPT.swift in Sources */,
@@ -331,11 +338,10 @@
 				73FE9712293FD83F009365FC /* PrimaryButton.swift in Sources */,
 				73FE9701293FD76C009365FC /* ContentView.swift in Sources */,
 				73FE96FC293FD701009365FC /* ViewDidLoadModifier.swift in Sources */,
-				73FE9707293FD7A6009365FC /* KanjiListSelection.swift in Sources */,
 				73FE9703293FD78F009365FC /* KanjiGrid.swift in Sources */,
 				73FE96CD293FD5AD009365FC /* KanjiDojoApp.swift in Sources */,
 				73FE970B293FD7BE009365FC /* License.swift in Sources */,
-				73FE970F293FD7D7009365FC /* KanjiView.swift in Sources */,
+				73DA286B293FE51200AC084E /* SupportMe.swift in Sources */,
 				73FE970D293FD7CC009365FC /* KanjiDiplayedView.swift in Sources */,
 				73DA2867293FDC0800AC084E /* JSONManager.swift in Sources */,
 				73FE96FE293FD72A009365FC /* Extensions.swift in Sources */,
@@ -500,17 +506,20 @@
 				DEVELOPMENT_TEAM = 8DB429W6ZT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KanjiDojo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -530,17 +539,20 @@
 				DEVELOPMENT_TEAM = 8DB429W6ZT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KanjiDojo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = myself.KanjiDojo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

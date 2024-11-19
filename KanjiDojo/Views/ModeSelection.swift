@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ModeSelection: View {
+    @Binding var allKanji: [Kanji]
     let backgroundColor : Color = Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118)
     @Binding var survivorModeTapped: Bool
     @Binding var standardModeTapped: Bool
@@ -24,13 +25,12 @@ struct ModeSelection: View {
     var body: some View {
         //GeomtryReader serve per fare in modo che la tastiera non sposti in alto tutta la view nel momento in cui appare. https://www.appsloveworld.com/coding/ios/16/swiftui-in-ios14-keyboard-avoidance-issues-and-ignoressafearea-modifier-issues
         GeometryReader { _ in
-            VStack(spacing: 50){
+            VStack(spacing: 30){
                 Spacer()
-                //Text("")
-                //.frame(height: 10)
                 if (!survivorModeTapped){
-                    Text("If you select **Survivor Mode** you can only choose **1 level** of JLPT. If more than 1 was selected then it will be set by default only **JLPT5** and then you can modify it.")
-                        .frame(width: 320, height: 90)
+                    Text("If you select **Survivor Mode** you can only choose **1 level** of JLPT. If more than 1 was selected it will be set by default only **JLPT5** and then you can modify it.")
+                        //.border(.green)
+                        .frame(width: 320, height: 130)
                         .foregroundColor(Color("AccentColor"))
                     
                 }
@@ -42,32 +42,33 @@ struct ModeSelection: View {
                                 .foregroundColor(Color("AccentColor"))
                                 .font(.system(size: 17))
                                 .bold()
-                                .onTapGesture {
-                                    print(allKanji.map { $0.weight })
-                                }
+                                .padding(.top,10)
                             Spacer()
                             Text("Last Kanji")
                                 .foregroundColor(Color("AccentColor"))
                                 .font(.system(size: 17))
                                 .bold()
+                                .padding(.top,10)
                             Spacer()
                         }
                         HStack(spacing: 40){
                             Spacer()
                             TextField("", text: $firstKanji)
-                                .font(.system(size:18))
+                                .font(.system(size:17))
                                 .foregroundColor(Color("AccentColor"))
                                 .disableAutocorrection(true)
                                 .textFieldStyle(.roundedBorder)
                                 .bold()
+                                .frame(maxWidth: 150)
                             Spacer()
                             TextField("", text: $lastKanji)
-                                .font(.system(size:18))
+                                .font(.system(size:17))
                                 .foregroundColor(Color("AccentColor"))
                             //.fontWeight(.heavy)
                                 .disableAutocorrection(true)
                                 .textFieldStyle(.roundedBorder)
                                 .bold()
+                                .frame(maxWidth: 150)
                             Spacer()
                         }
                         Button(action: {if(survivorModeTapped){
@@ -79,23 +80,25 @@ struct ModeSelection: View {
                             if(!isPresented){
                             //if(!isPresentedSurv && survivorModeTapped){
                                 kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)
+                                //print("kanji weights:")
+                                //print(allKanji.map { $0.weight });
                             }
                             else{
                                 firstKanji = "1"
                                 lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5))
                             }
-                        }, label: {Text("Set Kanji List").padding(10)})
+                        }, label: {Text("Set Kanji List").underline().padding(10).font(.system(size:17))})
                         .bold()
-                    }.frame(height: 90)
+                    }.frame(height: 130)
                 }
                 Text("Survivor Mode")
-                    .frame(width: 170, height: 170)
+                    .frame(width: 150, height: 150)
                     .foregroundColor(.white)
                     .padding()
                     .background(Color("AccentColor"))
                     .cornerRadius(30)
                     .shadow(radius: 10)
-                    .font(.system(size: 40))
+                    .font(.system(size: 36))
                     .bold()
                     .multilineTextAlignment(.center)
                     .overlay(RoundedRectangle(cornerRadius: 30)
@@ -109,7 +112,12 @@ struct ModeSelection: View {
                                 JLPT4=false;
                                 JLPT3=false;
                                 JLPT2=false;
-                                JLPT1=false
+                                JLPT1=false;
+                                lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5))
+                                kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)
+                            }
+                            else{
+                                kanjiSelection(kanji: &allKanji, first: Int(firstKanji) ?? 0, last: Int(lastKanji) ?? 0,jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5)
                             }
                         }
                     }
@@ -118,13 +126,13 @@ struct ModeSelection: View {
                         lastKanji = String(getLastKanji(kanji: &allKanji, jlpt1: JLPT1, jlpt2: JLPT2, jlpt3: JLPT3, jlpt4: JLPT4, jlpt5: JLPT5))
                     }
                 Text("Standard Mode")
-                    .frame(width: 170, height: 170)
+                    .frame(width: 150, height: 150)
                     .foregroundColor(.white)
                     .padding()
                     .background(Color("AccentColor"))
                     .cornerRadius(30)
                     .shadow(radius: 10)
-                    .font(.system(size: 40))
+                    .font(.system(size: 36))
                     .bold()
                     .multilineTextAlignment(.center)
                     .overlay(RoundedRectangle(cornerRadius: 30)
@@ -155,13 +163,16 @@ struct ModeSelection: View {
             //.edgesIgnoringSafeArea(.all)
             .ignoresSafeArea(.keyboard, edges: .bottom)
             .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
-        }
+        }.edgesIgnoringSafeArea(.all)
     }
         
 }
 
 struct ModeSelection_Previews: PreviewProvider {
     static var previews: some View {
-        ModeSelection(survivorModeTapped:.constant(true), standardModeTapped:.constant(false), firstKanji: .constant("1"), lastKanji: .constant(String(allKanji.count)),JLPT1:.constant(false),JLPT2:.constant(false),JLPT3:.constant(false),JLPT4:.constant(false),JLPT5:.constant(false))
+        ModeSelection(allKanji:.constant(kanjis), survivorModeTapped:.constant(true), standardModeTapped:.constant(false), firstKanji: .constant("1"), lastKanji: .constant(String(kanjis.count)),JLPT1:.constant(false),JLPT2:.constant(false),JLPT3:.constant(false),JLPT4:.constant(false),JLPT5:.constant(false))
     }
+    /*
+     ModeSelection(survivorModeTapped:.constant(true), standardModeTapped:.constant(false), firstKanji: .constant("1"), lastKanji: .constant(String(allKanji.count)),JLPT1:.constant(false),JLPT2:.constant(false),JLPT3:.constant(false),JLPT4:.constant(false),JLPT5:.constant(false))
+     */
 }

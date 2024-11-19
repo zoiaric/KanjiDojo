@@ -8,12 +8,15 @@
 import Foundation
 
 public class KanjiManager: ObservableObject {
+    //var allKanji = allKanjis
+    
+    
     //var data = KanjiData
-    //var data: [Kanji] = Kanji.allKanji
+    // var data: [Kanji] = Kanji.allKanji
     
+    //@Published var weights: [Int] = UserDefaults.standard.weights == [] ? allKanji.map { $0.weight } : UserDefaults.standard.weights
     
-    @Published var weights: [Int] = UserDefaults.standard.weights == [] ? allKanji.map { $0.weight } : UserDefaults.standard.weights
-    
+    /*
     static func saveWeights() {
         UserDefaults.standard.set(allKanji.map { $0.weight }, forKey: "weights")
     }
@@ -34,6 +37,9 @@ public class KanjiManager: ObservableObject {
     static func resetUserDefaults(){
         UserDefaults.standard.set(allKanji.map{ $0.weight }, forKey: "weights")
     }
+    */
+    
+    
     /*TEMPORANEAMENTE BLOCCATO, VECCHIO FUNZIONAMENTO
     @Published var weights: [Int] = UserDefaults.standard.weights == [] ? [5,5,5] : UserDefaults.standard.weights {
         didSet {

@@ -10,27 +10,27 @@ import SwiftUI
 struct License: View {
     var body: some View {
         VStack(spacing: 30){
-            Text("This app use data from an extensive kanji dictionary, provided by the **[\(Text("Kanji API").underline())](https://kanjiapi.dev)**.")
+            Text("This app use data from an extensive kanji dictionary, provided by the \(Text("**[kanji-data](https://github.com/davidluzgouveia/kanji-data)**").underline()) github repository by **David Gouveia**.")
                 .padding()
-                .frame(width: 340, height: 100)
-                .border(.green)
-                //.bold()
+                .frame(width: screenWidth*(6/7))
+                //.border(.green)
                 .foregroundColor(Color("AccentColor"))
+            /*
             Link(destination: URL(string: "https://kanjiapi.dev")!, label: {
                 Text("Kanji Api WebSite").bold()
             })
-            Text("The API uses the **EDICT** and **KANJIDIC** dictionary files that are property of the **Electronic Dictionary Research and Development Group**, and are used in conformance with the Group's **[license](http://www.edrdg.org/edrdg/licence.html)**.")
+             */
+            /*Text("The API uses the **EDICT** and **KANJIDIC** dictionary files that are property of the **Electronic Dictionary Research and Development Group**, and are used in conformance with the \(Text("**[Group's License](http://www.edrdg.org/edrdg/licence.html)**").underline()).")
                 .padding()
-                .frame(width: 340, height: 200)
-                .border(.green)
-                //.bold()
+                .frame(width: screenWidth*(6/7))
+                //.border(.green)
                 .foregroundColor(Color("AccentColor"))
-            Link(destination: URL(string: "http://www.edrdg.org/edrdg/licence.html")!, label: {
+             */
+            /*
+             Link(destination: URL(string: "http://www.edrdg.org/edrdg/licence.html")!, label: {
                 Text("License").bold()
             })
-            Link(destination: URL(string: "https://www.paypal.me/RZ16")!, label: {
-                Text("Support me!").linkButton()
-            })
+             */
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         //.edgesIgnoringSafeArea(.all)
